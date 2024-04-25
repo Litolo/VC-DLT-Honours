@@ -5,7 +5,7 @@ import issue_BC from "../../artifacts/contracts/Issuance.sol/Issuance.json"
 import addresses from "../../sample/addresses.json"
 var fs = require('fs');
 
-const test_number: number = 100;
+const test_number: number = 50;
 
 function random_string(length) {
     let result = '';
@@ -30,7 +30,7 @@ async function main() {
         var stream = fs.createWriteStream(`sample/metrics/data_${j}.csv`, {flags:'a'})
         stream.write("gas,method,sub_method\n")
         console.log("test",j)
-        for (let i = 0; i < 10; i++){
+        for (let i = 0; i < 1; i++){
             let issue = await Issue.deploy();
             stream.write((await issue.deploymentTransaction().wait()).gasUsed + ',deployment,\n')
             for (let i = 0; i < test_number; i++){
