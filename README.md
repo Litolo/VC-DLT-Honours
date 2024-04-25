@@ -2,6 +2,8 @@
 
 This project outlines a smart contract based approach towards verifiable credential issuance and verification using DLT and NFTs.
 
+You can find this project on [GitHub](https://github.com/Litolo/VC-DLT-Honours).
+
 ## Project Structure
 
 Contract source code is located in the [contracts/](contracts/) folder
